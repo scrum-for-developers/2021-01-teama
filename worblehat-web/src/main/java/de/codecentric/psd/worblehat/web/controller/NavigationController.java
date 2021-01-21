@@ -13,7 +13,7 @@ public class NavigationController {
     // this.bookService = bookService;
   }
 
-  @RequestMapping(value = "/" /*, method = RequestMethod.GET*/)
+  @RequestMapping(value = "/", method = RequestMethod.GET)
   public String home(/*ModelMap modelMap*/ ) {
     // List<Book> books = bookService.findAllBooks();
     // modelMap.addAttribute("books", books);
