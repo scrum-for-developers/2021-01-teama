@@ -18,6 +18,19 @@
 							th:errors="*{title}"></span></td>
 				</tr>
 				<tr>
+					<td>Author:</td>
+					<td><input type="text" th:field="*{author}" /></td>
+					<td><span id="author.error" class="error" th:if="${#fields.hasErrors('author')}"
+							th:errors="*{author}"></span></td>
+				</tr>
+				<tr>
+					<td>Year:</td>
+					<td align="right"><input type="text" th:field="*{yearOfPublication}" size=4 /></td>
+					<td><span id="yearOfPublication.error" class="error"
+							th:if="${#fields.hasErrors('yearOfPublication')}" th:errors="*{yearOfPublication}"></span>
+					</td>
+				</tr>
+				<tr>
 					<td>Edition:</td>
 					<td><input type="text" th:field="*{edition}" /></td>
 					<td><span id="edition.error" class="error" th:if="${#fields.hasErrors('edition')}"
@@ -30,21 +43,12 @@
 							th:errors="*{isbn}"></span></td>
 				</tr>
 				<tr>
-					<td>Author:</td>
-					<td><input type="text" th:field="*{author}" /></td>
-					<td><span id="author.error" class="error" th:if="${#fields.hasErrors('author')}"
-							th:errors="*{author}"></span></td>
-				</tr>
-				<tr>
-					<td>Year:</td>
-					<td><input type="text" th:field="*{yearOfPublication}" /></td>
-					<td><span id="yearOfPublication.error" class="error"
-							th:if="${#fields.hasErrors('yearOfPublication')}" th:errors="*{yearOfPublication}"></span>
-					</td>
+					<td></td>
+					<td align="right"><input type="submit" id="addBook" value="Add Book" /></td>
 				</tr>
 			</tbody>
 		</table>
-		<input type="submit" id="addBook" value="Add Book" />
+
 		<hr />
 		<a th:href="@{/}">Back to Home</a>
 	</form>
