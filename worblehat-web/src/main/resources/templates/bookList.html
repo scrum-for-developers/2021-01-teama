@@ -16,7 +16,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr th:each="book : ${books}">
+		<tr th:each="book, index : ${books}" th:style="${index.odd} ? 'background-color: grey;'">
 			<td th:text="${book.title}">Harry Potter</td>
 			<td th:text="${book.author}">J.K. Rowling</td>
 			<td th:text="${book.yearOfPublication}">2002</td>
