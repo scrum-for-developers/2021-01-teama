@@ -24,5 +24,12 @@
 				Return all borrowed books by one member.
 			</action>
 		</release>
+		<release version="1.0" date="2011-04-06"
+			description="Release with much improved functionality">
+			<action dev="betaworblers" type="update">Return all borrowed books by one member.</action>
+			<action dev="Red Team" type="update">Updates to UI</action>
+		</release>
+		
+
 	</body>
 </document>
