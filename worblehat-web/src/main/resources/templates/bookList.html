@@ -4,6 +4,7 @@
 	<title>Show all Books</title>
 </head>
 <body>
+	<h1>All Books</h1>
 	<table class="bookList">
 	<thead>
 		<tr>
@@ -16,7 +17,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr th:each="book, index : ${books}" th:style="${index.odd} ? 'background-color: grey;'">
+		<tr th:each="book, index : ${books}" th:style="${index.odd} ? 'background-color: lightgrey;'">
 			<td th:text="${book.title}">Harry Potter</td>
 			<td th:text="${book.author}">J.K. Rowling</td>
 			<td th:text="${book.yearOfPublication}">2002</td>
