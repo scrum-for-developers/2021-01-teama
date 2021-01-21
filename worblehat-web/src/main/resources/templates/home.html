@@ -13,33 +13,38 @@
 <body>
 <h1 id="welcome_heading"><span th:text="${@environment.getProperty('spring.application.name')}"></span></h1>
 
+User <br>
 <ul>
     <li><a th:href="@{/bookList}">Show all Books</a></li>
-    <li><a th:href="@{/insertBooks}">Add a new book</a></li>
     <li><a th:href="@{/borrow}">Borrow Book</a></li>
     <li><a th:href="@{/returnAllBooks}">Return all Books</a></li>
 </ul>
+<br><br>
+Admin<br>
+<ul>
+    <li><a th:href="@{/insertBooks}">Add a new book</a></li>
+</ul>
 
-<table class="bookList">
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Author</th>
-			<th>Year</th>
-			<th>Edition</th>
-			<th>ISBN</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr th:each="book : ${books}">
-			<td th:text="${book.title}">Harry Potter</td>
-			<td th:text="${book.author}">J.K. Rowling</td>
-			<td th:text="${book.yearOfPublication}">2002</td>
-			<td th:text="${book.edition}">1st</td>
-			<td th:text="${book.isbn}">123456</td>
-		</tr>
-	</tbody>
-</table>
+<!--<table class="bookList">
+<!--	<thead>
+<!--		<tr>
+<!--			<th>Title</th>
+<!--			<th>Author</th>
+<!--			<th>Year</th>
+<!--			<th>Edition</th>
+<!--			<th>ISBN</th>
+<!--		</tr>
+<!--	</thead>
+<!--	<tbody>
+<!--		<tr th:each="book : ${books}">
+<!--			<td th:text="${book.title}">Harry Potter</td>
+<!--			<td th:text="${book.author}">J.K. Rowling</td>
+<!--			<td th:text="${book.yearOfPublication}">2002</td>
+<!--			<td th:text="${book.edition}">1st</td>
+<!--			<td th:text="${book.isbn}">123456</td>
+<!--		</tr>
+<!--	</tbody>
+<!--</table>-->
 
 Version: <span th:text="${@environment.getProperty('info.version')}"></span>
 </body>
