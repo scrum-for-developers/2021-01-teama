@@ -1,23 +1,39 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<title>Borrow book - Worblehat Bookmanager</title>
+	<title>Borrow book - Worblehat Bookmanager</title>
 </head>
+
 <body>
 	<h1>Borrow Book</h1>
 
 	<form th:object="${borrowFormData}" method="POST">
-		ISBN:<input id="isbn" type="text" th:field="*{isbn}" />
-		<span id="isbn.error" th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}"></span>
-		<br />
-		Email:<input id="email" type="text" th:field="*{email}" />
-		<span id="email.error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
-		<br />
-		<input type="submit" id="borrowBook" value="Borrow Book" />
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td>ISBN:</td>
+					<td><input id="isbn" type="text" th:field="*{isbn}" /></td>
+					<td><span id="isbn.error" th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}"></span></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input id="email" type="text" th:field="*{email}" /></td>
+					<td><span id="email.error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right"><input type="submit" id="borrowBook" value="Borrow Book" /></td>
+				</tr>
+			</tbody>
+		</table>
 		<hr />
+
 		<a th:href="@{/}">Back to Home</a>
 	</form>
 
 
 </body>
+
 </html>
